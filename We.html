@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+    <link rel="icon" href="logo2.png" type="image/png">
+
+    <link rel="stylesheet" href="Us.css">
+
+    <style>
+        .music-icon {
+            font-size: 50px;
+            cursor: pointer;
+        }
+    </style>
+
+    <title>We</title>
+</head>
+<body>
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu3.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu6.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu4.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu2.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu7.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu5.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu9.jpg">
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="product-content">
+                    <div class="product-img">
+                        <img src="lu8.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper",{
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            loop: true,
+            initialSlide: Math.floor(document.querySelectorAll('.swiper-slide').length / 2),
+            coverflowEffect: {
+                depth:500,
+                modifer: 1,
+                slideShadows: true,
+                rotate:0,
+                stretch:0,
+            }
+
+        })
+    </script>
+    
+    <div class="controls">
+        <button class="btn"><i class="ph-bold ph-skip-back"></i></button>
+        <button class="btn"><i class="fas fa-play-circle music-icon" id="music-icon"></i></button>
+        <!-- <i class="fas fa-pause-circle music-icon"></i> -->
+        <button class="btn"><i class="ph-bold ph-skip-forward"></i></button>
+    </div>
+    <audio id="audio" src="ILU.mp3" ></audio>
+    <script>
+        const musicIcon = document.getElementById('music-icon');
+        const audio = document.getElementById('audio');
+    
+        musicIcon.addEventListener('click', () => {
+        if (audio.paused) {
+            audio.play();
+            musicIcon.classList.remove('fa-play-circle');
+            musicIcon.classList.add('fa-pause-circle');
+        } else {
+            audio.pause();
+            musicIcon.classList.remove('fa-pause-circle');
+            musicIcon.classList.add('fa-play-circle');
+        }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+@font-face {
+    font-family: Montserrat;
+    src: url(../Fonts/Montserrat-Light.ttf)format(truetype);
+    font-weight: 200px;
+}
+
+
+@font-face {
+    font-family: BiemHand;
+    src: url(Fonts/BriemHand-Light.ttf)format(truetype);
+    font-weight: 400px;
+}
+
+@font-face {
+    font-family: QuickSand;
+    src: url(Fonts/Quicksand-Medium.ttf)format(truetype);
+    font-weight: 400px;
+}
